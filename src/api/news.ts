@@ -1,9 +1,9 @@
 export interface INewsCard {
   _id: string;
   title: string;
-  Headings: string[];
-  categories: string[];
-  originalnewslink: string;
+  Headings?: string[];
+  categories?: string[];
+  originalnewslink?: string;
   summaryText: string;
   datetime: string;
   source: string;
@@ -17,18 +17,18 @@ export const getNews = async () => {
       imagelink: "https://img.freepik.com/free-photo/colorful-design-with-spiral-design_188544-9588.jpg",
       source: "BBC News",
       originalnewslink: "https://bbc.com/article123",
-      summaryText: "A major event occurred today in the tech industry.",
+      summaryText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae congue ligula. Curabitur vel bibendum ligula.",
       datetime: "2024-11-21T10:30:00Z",
       title: "Tech Giants Announce Merger",
       Headings: ["Introduction", "Details", "Impact", "Conclusion"],
       categories: ["Technology", "Business"],
     },
     {
-      _id: "648f1b2c4fa12345abcd1235",
+      _id: "648f1b2c4fa12345abcd1239",
       imagelink: "https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649",
       source: "Reuters",
       originalnewslink: "https://reuters.com/article456",
-      summaryText: "The stock market experienced a sharp drop today.",
+      summaryText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae congue ligula. Curabitur vel bibendum ligula.",
       datetime: "2024-11-21T15:45:00Z",
       title: "Markets Plunge Amid Global Uncertainty",
       Headings: ["Market Overview", "Reasons for Drop", "Expert Opinions"],
@@ -59,7 +59,7 @@ export const getNews = async () => {
       categories: ["Environment", "Politics"],
     },
     {
-      _id: "648f1b2c4fa12345abcd1238",
+      _id: "648f1b2c4fa12345abcd1232",
       imagelink: "https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630",
       source: "CNN",
       originalnewslink: "https://cnn.com/worldnews101",
@@ -74,6 +74,18 @@ export const getNews = async () => {
       ],
       categories: ["Science", "Astronomy"],
     },
+    {
+      _id: "648f1b2c4fa12345abcd1235",
+      imagelink: "https://img.freepik.com/free-photo/colorful-design-with-spiral-design_188544-9588.jpg",
+      source: "BBC News",
+      originalnewslink: "https://bbc.com/article123",
+      summaryText: "A major event occurred today in the tech industry.",
+      datetime: "2024-11-21T10:30:00Z",
+      title: "Tech Giants Announce Merger",
+      Headings: ["Introduction", "Details", "Impact", "Conclusion"],
+      categories: ["Technology", "Business"],
+    },
+
   ];
   return news;
 };

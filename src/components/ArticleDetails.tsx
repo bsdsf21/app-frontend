@@ -1,25 +1,26 @@
 import React from "react";
-
-const Article = () => {
+import { getNews } from "@/api/news";
+const Article = async () => {
+  const news = await getNews();
   return (
-    <div className="min-h-screen bg-gray-100 py-10">
+    <div className=" bg-gray-50">
       <div className="max-w-4xl mx-auto bg-white shadow-md overflow-hidden">
         {/* Article Header */}
         <div className="relative">
           <img
-            src="https://via.placeholder.com/800x400"
+            src={news[2]["imagelink"]}
             alt="Article"
             className="w-full h-64 object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <h1 className="text-4xl text-white font-bold text-center px-4">
-              Article Title
-            </h1>
-          </div>
         </div>
 
         {/* Article Content */}
         <div className="p-6">
+          <div>
+            <h1 className="text-2xl text-black font-bold mb-3">
+              {news[2]["title"]}
+            </h1>
+          </div>
           <div className="mb-4 text-gray-500 text-sm flex justify-between">
             <span>Author: Jane Doe</span>
             <span>Published: November 24, 2024</span>
