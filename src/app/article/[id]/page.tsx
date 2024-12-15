@@ -1,18 +1,21 @@
 import Article from "@/components/ArticleDetails";
 import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
 import Recommended from "@/components/Recommended";
 import Header from "@/components/Header";
 
-export default function Home() {
+interface ArticlePageProps { 
+  params: { id: string }
+}
+
+export default async function ArticlePage({ params }: ArticlePageProps) {
+  const { id } = await params;
   return (
     <div className="bg-gray-50 text-gray-900">
-      <Header />
-      <div className="mx-auto grid grid-cols-3 md:grid-cols-3 gap-6">
+      <div className="mx-auto grid grid-cols-3 md:grid-cols-3">
         <div className="col-span-2">
-          <Article />
+          <Article id={id as string} />
         </div>
-        <div>
+        <div className="col-span-1 px-6">
           <Recommended />
         </div>
       </div>
@@ -20,5 +23,3 @@ export default function Home() {
     </div>
   );
 }
-
-
