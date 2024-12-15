@@ -1,14 +1,16 @@
 import { getRecentNews } from "@/api/news";
-import { get } from "http";
+import Link from "next/link";
+
 export default async function Recommended() {
   const news = await getRecentNews();
-
+  const topnews = news.slice(0, 8);
   return (
     <section className="py-10">
       <div className="mx-auto">
         <h2 className="text-xl font-bold mb-6">Recommended</h2>
         <div className="grid grid-cols-1 gap-1">
-          {news.map(({ title, short_summary, imageUrl, _id }) => (
+          {topnews.map(({ _id, title, short_summary, imageUrl}) => (
+            <Link href={`/article/${_id}`} key={_id}>
             <div className="bg-white p-4 flex" key={_id}>
               <img
                 src={imageUrl}
@@ -27,6 +29,7 @@ export default async function Recommended() {
                 <span className="text-xs"><br></br> {short_summary}</span>
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>
