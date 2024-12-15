@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => (
   <header className="bg-black text-white justify-stretch">
-    <div className="container mx-auto">
+    <div className="relative mx-auto">
       <div>
         <h1 className="text-3xl font-bold p-5">NEWSLETTER</h1>
       </div>

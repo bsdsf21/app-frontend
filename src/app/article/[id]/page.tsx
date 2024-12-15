@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="bg-gray-50 text-gray-900">
       <Header />
-      <div className="container mx-auto grid grid-cols-3 md:grid-cols-3 gap-6">
+      <div className="mx-auto grid grid-cols-3 md:grid-cols-3 gap-6">
         <div className="col-span-2">
           <Article />
         </div>
