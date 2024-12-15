@@ -1,12 +1,16 @@
-import { INewsCard } from "@/api/news";
 import Link from "next/link";
+
+export interface INewsCard {
+  _id: string;
+  imageUrl: string;
+  title: string;
+  short_summary: string;  
+}
 
 export default function NewsCard({
   _id,
   title,
   short_summary,
-  datetime,
-  source,
   imageUrl,
 }: INewsCard) {
   return (

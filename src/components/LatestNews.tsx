@@ -11,15 +11,13 @@ const LatestNews = async () => {
         <h2 className="text-xl font-bold mb-6">Latest News</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {latestNews.map(
-            ({ title, short_summary, imageUrl, _id, source, datetime }) => (
+            ({ _id, title, short_summary, imageUrl }) => (
               <NewsCard
                 key={_id}
+                _id={_id}
                 title={title}
                 short_summary={short_summary}
                 imageUrl={imageUrl}
-                _id={_id}
-                source={source}
-                datetime={datetime}
               />
             )
           )}
