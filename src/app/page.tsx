@@ -8,11 +8,11 @@ export default function Home() {
   return (
     <div className="text-gray-900">
       <Hero />
-      <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 py-10">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-3 py-10">
         <div className="col-span-2">
           <LatestNews />
         </div>
-        <div>
+        <div className="col-span-1 px-6">
           <Recommended />
         </div>
       </div>

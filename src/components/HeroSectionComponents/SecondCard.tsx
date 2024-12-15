@@ -5,10 +5,10 @@ const Card2 = async () => {
   return (
     <div className="bg-[#1A1A1A] gap-1 p-2">
       <Link href={`/article/${news[1]["_id"]}`}>
-        <div className="max-w-sm w-full lg:max-w-full lg:flex flex-row-reverse">
+        <div className="w-full lg:flex flex-row-reverse">
           {/* Image Section */}
           <div
-            className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-r text-center overflow-hidden"
+            className="h-40 lg:w-40 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-r text-center overflow-hidden"
             title="Woman holding a mug"
           >
             <img
@@ -21,7 +21,7 @@ const Card2 = async () => {
           {/* Text Section */}
           <div className="bg-[#1A1A1A] p-4 flex flex-col justify-between leading-normal">
             <div className="mb-8">
-              <div className="text-white font-bold text-sm mb-2 truncate overflow-hidden">
+              <div className="text-white font-bold text-sm mb-2 overflow-hidden">
                 {news[1]["title"]}
               </div>
               <p
