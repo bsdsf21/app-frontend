@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getRecentNews } from "@/api/news";
+import Image from "next/image";
 const Card2 = async () => {
   const news = await getRecentNews();
   return (
@@ -11,7 +12,7 @@ const Card2 = async () => {
             className="h-40 lg:w-40 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-r text-center overflow-hidden"
             title="Woman holding a mug"
           >
-            <img
+            <Image
               src={news[1]["imageUrl"]}
               alt="News"
               className="w-full h-full object-cover"

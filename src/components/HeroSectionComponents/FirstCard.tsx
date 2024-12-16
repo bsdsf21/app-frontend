@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { getRecentNews } from "@/api/news";
+import Image from "next/image";
 const Card1 = async () => {
   const news = await getRecentNews();
   return (
     <div>
       <Link href={`/article/${news[0]["_id"]}`}>
         <div className="bg-white p-4" key={news[0]["_id"]}>
-          <img
+          <Image
             src={news[0]["imageUrl"]}
             alt="News"
             className="w-full h-48 object-cover"

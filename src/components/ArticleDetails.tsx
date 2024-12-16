@@ -1,18 +1,18 @@
 import React from "react";
 import { getNewsById } from "@/api/news";
-
+import Image from "next/image";
 interface ArticleProps {
   id: string;
 }
 
 const Article = async ({ id }: ArticleProps) => {
   const news = await getNewsById(id);
-  const { _id, title, imageUrl, long_summary, source, date_time } = news;
+  const { title, imageUrl, long_summary, source, date_time } = news;
   return (
     <div className=" bg-gray-50">
       <div className="max-w-4xl mx-auto bg-white shadow-md overflow-hidden">
         <div className="relative">
-          <img
+          <Image
             src={imageUrl}
             alt="Article"
             className="w-full h-64 object-cover"

@@ -4,7 +4,7 @@ const Header = () => (
   <header className="bg-black text-white justify-stretch">
     <div className="relative mx-auto">
       <div>
-        <h1 className="text-3xl font-bold p-5">NEWSLETTER</h1>
+        <h1 className="text-3xl font-bold p-5">Briefly<span className="text-2xl font-normal"> | Get the news briefly</span></h1>
       </div>
       <div className="grid grid-cols-2 bg-[#1A1A1A]">
         <div>

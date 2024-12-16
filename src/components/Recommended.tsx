@@ -1,4 +1,5 @@
 import { getRecentNews } from "@/api/news";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function Recommended() {
@@ -12,7 +13,7 @@ export default async function Recommended() {
           {topnews.map(({ _id, title, short_summary, imageUrl}) => (
             <Link href={`/article/${_id}`} key={_id}>
             <div className="bg-white p-4 flex" key={_id}>
-              <img
+              <Image
                 src={imageUrl}
                 alt="News"
                 className="w-20 h-20 object-cover"

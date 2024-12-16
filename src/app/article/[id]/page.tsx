@@ -1,7 +1,6 @@
 import Article from "@/components/ArticleDetails";
 import Footer from "@/components/Footer";
 import Recommended from "@/components/Recommended";
-import Header from "@/components/Header";
 
 interface ArticlePageProps { 
   params: { id: string }

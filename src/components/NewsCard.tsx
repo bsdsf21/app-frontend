@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export interface INewsCard {
@@ -16,7 +17,7 @@ export default function NewsCard({
   return (
     <Link href={`/article/${_id}`}>
       <div className="bg-white p-4" key={_id}>
-        <img src={imageUrl} alt="News" className="w-full h-48 object-cover" />
+        <Image src={imageUrl} alt="News" className="w-full h-48 object-cover" />
         <h6 className="font-bold mt-4">{title}</h6>
         <p className="text-xs mt-2">{short_summary}</p>
       </div>
