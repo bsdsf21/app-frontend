@@ -17,7 +17,7 @@ const LatestNews = async () => {
                 _id={_id}
                 title={title}
                 short_summary={short_summary}
-                imageUrl={imageUrl}
+                imageUrl={imageUrl[0]}
               />
             )
           )}

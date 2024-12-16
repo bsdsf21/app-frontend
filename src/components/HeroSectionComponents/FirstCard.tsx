@@ -8,9 +8,11 @@ const Card1 = async () => {
       <Link href={`/article/${news[0]["_id"]}`}>
         <div className="bg-white p-4" key={news[0]["_id"]}>
           <Image
-            src={news[0]["imageUrl"]}
+            src={news[0]?.imageUrl[0] || "/placeholder-image.jpg/"}
             alt="News"
             className="w-full h-48 object-cover"
+            width={1000}
+            height={1000}
           />
           <h3 className="font-bold mt-4">{news[0]["title"]}</h3>
           <p className="text-sm mt-2">{news[0]["short_summary"]}</p>

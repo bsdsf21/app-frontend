@@ -14,9 +14,11 @@ export default async function Recommended() {
             <Link href={`/article/${_id}`} key={_id}>
             <div className="bg-white p-4 flex" key={_id}>
               <Image
-                src={imageUrl}
+                src={imageUrl[0] || "/placeholder-image.jpg/"}
                 alt="News"
                 className="w-20 h-20 object-cover"
+                width={1000}
+                height={1000}
               />
               <div
                 className="ml-4 text-ellipsis overflow-hidden"

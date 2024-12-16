@@ -10,9 +10,11 @@ const Card3 = async () => {
           {/* Image Section */}
           <div className="h-40 lg:w-40 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
             <Image
-              src={news[2]["imageUrl"]}
+              src={news[2]?.imageUrl?.[0] || "/placeholder-image.jpg/"}
               alt="News"
               className="w-full h-full object-cover"
+              width={1000}
+              height={1000}
             />
           </div>
 

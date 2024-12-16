@@ -13,9 +13,11 @@ const Card2 = async () => {
             title="Woman holding a mug"
           >
             <Image
-              src={news[1]["imageUrl"]}
+              src={news[1]?.imageUrl?.[0] || "/placeholder-image.jpg/"}
               alt="News"
               className="w-full h-full object-cover"
+              width={1000}
+              height={1000}
             />
           </div>
 

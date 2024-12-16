@@ -13,8 +13,10 @@ const Article = async ({ id }: ArticleProps) => {
       <div className="max-w-4xl mx-auto bg-white shadow-md overflow-hidden">
         <div className="relative">
           <Image
-            src={imageUrl}
+            src={imageUrl[0] || "/placeholder-image.jpg/"}
             alt="Article"
+            width={1000}
+            height={1000}
             className="w-full h-64 object-cover"
           />
         </div>

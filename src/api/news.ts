@@ -3,7 +3,7 @@ interface INews {
   title: string;
   short_summary: string;
   long_summary: string;
-  imageUrl: string;
+  imageUrl: string[];
   source: string;
   date_time: string;
 }

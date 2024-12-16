@@ -2,8 +2,8 @@ import Article from "@/components/ArticleDetails";
 import Footer from "@/components/Footer";
 import Recommended from "@/components/Recommended";
 
-interface ArticlePageProps { 
-  params: { id: string }
+interface ArticlePageProps {
+  params: Promise<{ id: string }>
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
